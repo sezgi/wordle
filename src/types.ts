@@ -11,7 +11,7 @@ export enum KeyClass {
 }
 export interface Tile {
   value: string;
-  classList: TileClass[] & string[];
+  classList: TileClass[] | string[];
 }
 export type TileGrid = Tile[][];
 export type KeyboardLayout = string[][];

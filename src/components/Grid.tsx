@@ -16,6 +16,7 @@ const Grid: React.FC<GridProps> = ({ grid, showMessage, MessageComponent }) => {
         row.map((col, colIndex) => (
           <div
             id={`tile-${rowIndex}-${colIndex}`}
+            data-testid={`tile-${rowIndex}-${colIndex}`}
             key={`${rowIndex}-${colIndex}`}
             className={col.classList.join(" ")}
           >

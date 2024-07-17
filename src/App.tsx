@@ -13,7 +13,7 @@
  * Game over when all guesses are used
  * ---
  * TODO:
- * Write tests
+ * Write more tests
  * Make keyboard responsive (e.g. mobile)
  * Test app on mobile
  * Add flip animation to tiles

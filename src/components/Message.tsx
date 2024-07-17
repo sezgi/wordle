@@ -14,7 +14,7 @@ const Message: React.FC<MessageProps> = ({ win, gameOver, word, onReset }) => {
     <div className="message">
       <p>
         {win && "YOU GOT IT!"}
-        {gameOver && `Sorry, it was "${word}"`}
+        {!win && gameOver && `Sorry, it was "${word}"`}
       </p>
       <button onClick={onReset}>Play again</button>
     </div>
