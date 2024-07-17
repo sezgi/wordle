@@ -84,6 +84,11 @@
   min-width: 40px;
 }
 
+.keyboard-key--correct,
+.keyboard-key--shifted,
+.keyboard-key--absent {
+  color: white;
+}
 .keyboard-key--correct {
   background-color: var(--correct);
 }
