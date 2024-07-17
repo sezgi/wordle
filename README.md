@@ -6,4 +6,4 @@ Wiki: https://en.wikipedia.org/wiki/Wordle
 
 **Tech stack**: React, TypeScript, React Testing Library, Jest
 
-![Screenshot](public/screenshot.png)
+![Screenshot](public/wordle-screenshot.png)
