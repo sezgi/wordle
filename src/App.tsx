@@ -13,6 +13,7 @@
  * Game over when all guesses are used
  * ---
  * TODO:
+ * Check if valid word
  * Write more tests
  * Make keyboard responsive (e.g. mobile)
  * Test app on mobile
