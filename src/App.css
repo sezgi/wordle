@@ -1,0 +1,127 @@
+:root {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  --spacing: 8px;
+  --tile-border: #d3d6da;
+  --correct: #6aaa64;
+  --shifted: #c9b458;
+  --guessed: #787c7e;
+  --guessing: #878a8c;
+  padding: calc(var(--spacing) * 2);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2rem;
+}
+
+.grid {
+  max-width: 290px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  position: relative;
+}
+
+.tile {
+  border: 2px solid var(--tile-border);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tile span {
+  padding-top: 4px;
+}
+
+.tile.guessing {
+  border: 2px solid var(--guessing);
+}
+
+.tile.guessed {
+  background-color: var(--guessed);
+  border: none;
+  color: white;
+}
+
+.tile.correct {
+  background-color: var(--correct);
+}
+
+.tile.shifted {
+  background-color: var(--shifted);
+}
+
+.keyboard {
+  display: flex;
+  gap: var(--spacing);
+  flex-direction: column;
+  align-items: center;
+  margin-top: calc(var(--spacing) * 2);
+}
+
+.keyboard-row {
+  display: flex;
+  gap: calc(var(--spacing) / 2);
+}
+
+.keyboard-key {
+  padding: 16px 12px;
+  background-color: var(--tile-border);
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  min-width: 40px;
+}
+
+.keyboard-key--correct {
+  background-color: var(--correct);
+}
+.keyboard-key--shifted {
+  background-color: var(--shifted);
+}
+.keyboard-key--absent {
+  background-color: var(--guessed);
+}
+
+.key-Enter {
+  font-size: 0.7rem;
+  position: relative;
+  bottom: 2px;
+}
+
+.key-Backspace {
+  display: inline-block;
+  font-weight: normal;
+  transform: scale(1.2);
+  padding: 0 4px;
+}
+
+.message {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: min(8vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+}
+
+.message button {
+  border: 1px solid var(--guessing);
+}
